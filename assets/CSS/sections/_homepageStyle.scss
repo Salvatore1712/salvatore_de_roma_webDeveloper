@@ -1,0 +1,194 @@
+// HOME PAGE STYLE
+@use "../abstract/variables";
+
+
+
+.hero {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items:flex-start;
+        gap: 10px;
+        height: 89dvh;
+        max-width: 100dvw;
+
+        // text "Salvatore De Roma"
+            h3 {
+                margin: 0;
+                padding: 50px 0 0 0;
+                font-size: clamp(1em, 20px, 2em);
+                font-weight: 200;
+                text-align: left;
+                color: variables.$totalBlack;
+                
+            }
+
+            h1 {
+                width: 100%;
+                max-width: 98%;
+                font-size: clamp(3rem, 25vw, 5.2rem);
+                line-height: 1em;
+                font-weight: bold;
+                text-align: left;
+                animation: showAnimation 1.9s ease-in forwards;
+                word-break: break-all;
+                word-wrap: break-word;
+            }
+
+            h2 {
+                font-weight: 200;
+                font-size: clamp(1.8em, 24px, 2em);
+
+                span {
+                    color: variables.$secondaryColor;
+                    font-weight: 400;
+                }
+            }
+        }
+
+
+@keyframes showAnimation {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+@media (min-width: 1024px) {
+    .hero h1 {
+        font-size: clamp(8em, 150px, 10em);
+    }
+}
+.project-section {
+    margin-top: 105px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items:flex-start;
+    height: 60%;
+
+    p {     
+            font-size: 20px;
+            width: 80%;
+            padding-top: 20px;
+            margin: 0 auto;
+        }
+    .btn {
+        display: block;
+        margin: 16px auto 0;
+        align-self: center;
+    }
+
+    .flex {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+.things-text {
+        font-size: clamp(2.5em, 40px, 3em);
+
+        span {
+            color: variables.$secondaryColor;
+        }
+}
+
+#animation-word {
+    display: none;
+}
+
+
+
+
+
+// DESKTOP STYLE
+
+@media (min-width: 1024px) {
+    .project-section {
+        margin-top: 130px;
+        // border: $debugBorder;
+        display: block;
+
+        .things-text {
+            font-size: clamp(3.5rem, 65px, 34em);
+            text-align:center;
+            // border: $debugBorder;
+            padding-top: 50px;
+            span {
+                color: variables.$secondaryColor;
+            }
+        }
+
+        .flex {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        p {
+            font-size: 22px;
+            width: 40%;
+            padding-top: 40px;
+        }
+        .btn {
+            display: block;
+            width: auto;
+            height: auto;
+            margin: 20px auto 0;
+            align-self: center;
+        }
+    }
+    #animation-word {
+        display: block;
+        // border: $debugBorder;
+        text-align: center;
+        margin-bottom: 6rem;
+        margin-top: 5em;
+
+        h3 {
+            padding: 10px 24px;
+            span {
+                letter-spacing: 1rem;
+                font-weight: bold;
+                font-size: 40px;
+                opacity: 0;
+            }
+        }
+
+        &.is-visible {
+            h3 {
+                animation: show-word 1s ease-in-out forwards;
+                animation-timeline: view(100%);
+                padding: 0 16px;
+
+                #anim-1 {
+                    animation: show-word 1s ease-in-out forwards;
+                }
+                #anim-2{
+                    animation: show-word 1s ease-in-out forwards;
+                    animation-delay: 1.5s;
+                    color: variables.$secondaryColor;
+                }
+                #anim-3{
+                    animation: show-word 1s ease-in-out forwards;
+                    animation-delay: 2s;
+                }
+            }
+        }
+    }
+
+    @keyframes show-word {
+        from {
+            opacity: 0;
+        }
+        to {
+            opacity: 1;
+            letter-spacing: normal;
+        }
+        
+    }
+    
+}

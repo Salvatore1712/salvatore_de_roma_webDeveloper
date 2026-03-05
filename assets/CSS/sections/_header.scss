@@ -1,0 +1,110 @@
+// HEADER LAYOUT
+
+@use "../abstract/variables";
+
+.header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        height: auto;
+        position: sticky;
+        width: 100%;
+        padding: 8px 0 8px 0;
+        top: 0;
+        // border: $debugBorder;
+        background-color: variables.$totalWhite;
+        // box-shadow: 0px 2px 0px rgb(238, 238, 238);
+        z-index: 1000;
+
+        ul {
+            padding: 0;
+            margin: 0;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            gap: 16px;
+            height: 100vh;
+            align-items: center;
+            width: 95%;
+        }
+
+        ul li {
+            text-decoration: none;
+            list-style-type: none;
+            width: 100%;
+            // hover on li items (links)
+        }
+        a {
+            text-decoration: none;
+            color: variables.$totalBlack;
+            padding: 0;
+            margin: 0;
+            font-size: 25.28px;
+            &:hover {
+                color: variables.$secondaryColor;
+                text-decoration: underline;
+            }
+        }
+
+        // dropdown menù
+        .menu {
+            position: fixed;
+            text-align: center;
+            // border: $debugBorder;
+            width: 100%;
+            top: 0;
+            left: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: variables.$totalWhite;
+            gap: 16px;
+            display: none;
+            transition: opacity 0.5s ease-in-out;
+            z-index: 999;
+            inset: 0;
+        }
+
+        // checkbox input for menù
+        #btn-menu {
+            display: none;
+            width: 100%;
+            position: relative;
+
+            &:checked ~ .menu {
+                display: block;
+                transition: opacity 0.3s ease-in-out;
+            }
+        }
+
+        .menu-icon {
+                width: 26px;
+                height: 3px;
+                background-color: variables.$secondaryColor;
+                position: absolute;
+                top: 15px;
+                right: 15px;
+                z-index: 1001;
+
+                &::before {
+                    content: "";
+                    position: absolute;
+                    top: 5px;
+                    width: 100%;
+                    height: 100%;
+                    background-color: variables.$secondaryColor;
+                }
+                &::after {
+                    content: "";
+                    position: absolute;
+                    top: 10px;
+                    width: 100%;
+                    height: 100%;
+                    background-color: variables.$secondaryColor;
+                }
+        }
+}
+@media (min-width:1024px) {
+    
+}

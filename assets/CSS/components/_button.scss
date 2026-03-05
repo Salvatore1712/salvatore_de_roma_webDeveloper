@@ -1,0 +1,28 @@
+// STYLE BUTTON
+@use "../abstract/variables";
+.btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    height: 50px;
+    padding: 8px;
+    border-radius: 10px;
+    font-size: calc(variables.$fontSize * 1.5);
+    font-family: variables.$fontCustom;
+    font-weight: bold;
+    color: variables.$totalWhite;
+    background-color: variables.$secondaryColor;
+    cursor: pointer;
+
+    &:hover {
+        background-color: variables.$darkSecondaryColor;
+        transition: 0.3s ease-in-out;
+    }
+
+    a {
+        color: variables.$totalWhite;
+    }
+}
+
+// <button class="btn"><a href="#">LINK</a></button>

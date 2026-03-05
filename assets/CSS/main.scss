@@ -1,0 +1,69 @@
+// MAIN SCSS STYLE SITE
+
+// IMPORT VARIABLES
+@use "./abstract/variables";
+
+// HEADER STYLE
+@use "./sections/header";
+
+// HOME PAGE STYLE
+@use "./sections/homepageStyle";
+
+// ABOUT PAGE STYLE
+@use "./sections/aboutPage";
+
+// CONTACT PAGE STYLE
+@use "./sections/contactPage";
+
+// BUTTON COMPONENT
+@use "./components/button";
+
+// FOOTER STYLE
+@use "./sections/footerStyle";
+
+
+
+
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+}
+
+body {
+    font-family: "Figtree", sans-serif;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    scroll-behavior: smooth;
+}
+a {
+    text-decoration: none;
+}
+#grid-container {
+    flex: 1;
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 0px;
+    margin: 0 auto;
+    padding: 0 9.48px 0 9.48px;
+    box-sizing: border-box;
+
+    .grid-items {
+    }
+}
+.spacer {
+    height: clamp(48px, 8vh, 100px);
+    flex: 0 0 clamp(48px, 8vh, 100px);
+    width: 100%;
+}
+
+.footer-spacer {
+    display: none;
+}
