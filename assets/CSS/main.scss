@@ -24,6 +24,9 @@
 // FOOTER STYLE
 @use "./sections/footerStyle";
 
+// CV PAGE IMPORT
+@use "../CSS/sections/cvPageStyle";
+
 
 
 
@@ -62,7 +65,7 @@ a {
     }
 }
 .spacer {
-    height: clamp(48px, 8vh, 100px);
+    height: 100px;
     flex: 0 0 clamp(48px, 8vh, 100px);
     width: 100%;
 }

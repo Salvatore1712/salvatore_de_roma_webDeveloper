@@ -3,8 +3,8 @@
 @use "../abstract/variables";
 
 .about-section {
-    height: 50dvh;
-    padding-top: 10dvh;
+    height: auto;
+    padding-top: 12dvh;
     // border: 1px solid salmon;
     text-align: center;
 
@@ -27,7 +27,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-bottom: 10dvh;
+    margin-bottom: 100px;
 
     h3 {
         font-weight: 700;
