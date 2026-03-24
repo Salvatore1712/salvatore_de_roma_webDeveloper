@@ -1,6 +1,10 @@
 @use "../abstract/variables";
 
 .header {
+    position: sticky;
+    top: 2px;
+    background-color: rgba($color: #ffffff, $alpha: 0.8);
+    box-shadow: 0px 0px 20px white;
     display: flex;
     justify-content: space-between;
     width: 100%;

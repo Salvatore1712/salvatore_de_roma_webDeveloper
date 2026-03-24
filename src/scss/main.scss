@@ -17,8 +17,8 @@
 // IMPORT CONTACT_PAGE STYLE
 
 
-// BUTTON COMPONENT
-
+// BUTTON COMPONENT STYLE
+@use "./components/button";
 
 // FOOTER STYLE
 
@@ -47,9 +47,93 @@ body {
     align-items: center;
     flex-direction: column;
 }
+ul {
+    list-style-type: none;
+}
+a {
+    text-decoration: none;
+    color: variables.$totalBlack;
+}
 
 .blue__color {
     color: variables.$colorBlue;
     font-weight: 500;
+}
+
+// FOOTER SECTION
+.footer {
+    margin-top: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    &__social__box {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+    }
+    .social__image {
+        width: 30px;
+    }
+
+    &__box__menu {
+        margin-top: 32px;
+        padding-top: 16px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        img {
+            width: 100px;
+        }
+    }
+
+    &__menu {
+        // border: 1px solid salmon;
+        margin-top: 16px;
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        font-size: 14px;
+    }
+
+    &__box__info {
+        width: 100%;
+        margin-top: 8px;
+        font-size: 12px;
+        padding: 8px;
+    }
+
+    @media (min-width:767px) {
+        padding: 0 16px;
+        width: 100%;
+        justify-content: space-between;
+
+        &__menu {
+            font-size: 14px;
+            padding: 0  16px;
+        }
+
+        &__box__info {
+            width: 100%;
+            margin-top: 8px;
+            font-size: 16px;
+            padding: 8px;
+            text-align: center;
+        }
+    }
+    @media (min-width:1024px) {
+        width: 50%;
+        
+        &__menu {
+            // border: 1px solid salmon;
+            margin-top: 16px;
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+            font-size: 18px;
+        }
+    }
 }
 
