@@ -8,7 +8,7 @@
     justify-content: space-between;
     align-items: left;
     margin-top: 40px;
-    height: calc(94vh - 40px);
+    height: calc(92vh - 40px);
     width: 100%;
     overflow: hidden;
     padding-bottom: 20px;
@@ -32,20 +32,19 @@
     @media (min-width:767px) {
         //MEDIA QUERY DESKTOP HERO
         padding: 0 16px 0 16px;
-        height: 100%;
 
         &__title {
             line-height: 0.8em;
-            font-size: clamp(12rem, 18vw, 20rem);
+            font-size: clamp(18rem, 20vw, 20rem);
         }
 
         &__title--small {
-            font-size: clamp(3em, 30px, 6em);
+            font-size: clamp(2em, 30px, 5em);
         }
     }
     @media screen and (orientation: landscape) {
         &__title {
-            font-size: clamp(6rem, 10vw, 10rem);
+            font-size: clamp(15rem, 20vw, 10rem);
         }
     }
 }
