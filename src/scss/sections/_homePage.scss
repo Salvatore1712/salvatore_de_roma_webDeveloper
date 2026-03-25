@@ -18,7 +18,7 @@
     }
 
     &__title {
-        font-size: 30vw;
+        font-size: clamp(5rem, 1.8182rem + 11.9091vw, 15rem);
         word-break: break-all;
         line-height: 0.8em;
         font-weight: bold;
@@ -35,7 +35,7 @@
 
         &__title {
             line-height: 0.8em;
-            font-size: clamp(18rem, 20vw, 20rem);
+            // font-size: clamp(4rem, 1.8182rem + 10.9091vw, 10rem);
         }
 
         &__title--small {
@@ -44,7 +44,7 @@
     }
     @media screen and (orientation: landscape) {
         &__title {
-            font-size: clamp(15rem, 20vw, 10rem);
+            // font-size: clamp(4rem, 1.8182rem + 10.9091vw, 10rem);
         }
     }
 }

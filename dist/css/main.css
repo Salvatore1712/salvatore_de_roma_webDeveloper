@@ -169,7 +169,7 @@
   font-weight: 100;
 }
 .hero__title {
-  font-size: 30vw;
+  font-size: clamp(5rem, 1.8182rem + 11.9091vw, 15rem);
   word-break: break-all;
   line-height: 0.8em;
   font-weight: bold;
@@ -184,18 +184,11 @@
   }
   .hero__title {
     line-height: 0.8em;
-    font-size: clamp(18rem, 20vw, 20rem);
   }
   .hero__title--small {
     font-size: clamp(2em, 30px, 5em);
   }
 }
-@media screen and (orientation: landscape) {
-  .hero__title {
-    font-size: clamp(15rem, 20vw, 10rem);
-  }
-}
-
 .bio {
   margin-top: 100px;
   padding: 0 16px;
