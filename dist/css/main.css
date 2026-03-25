@@ -265,13 +265,14 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: space-between;
+  justify-content: flex-start;
   gap: 0px;
   margin-bottom: 32px;
   max-width: 350px;
   width: 100%;
   box-shadow: 4px 4px 6px rgba(0, 0, 0, 0.2);
   padding-bottom: 16px;
+  height: 400px;
 }
 .word__check {
   width: 30px;
@@ -326,9 +327,14 @@
     gap: 32px;
   }
   .word__box {
-    box-shadow: 4px 4px 6px rgba(0, 0, 0, 0.2);
+    box-shadow: 4px 4px 6px rgba(0, 0, 0, 0.15);
     padding-bottom: 16px;
     max-width: 350px;
+    border-radius: 10px 10px 0 0;
+  }
+  .word__box:hover {
+    box-shadow: 4px 4px 6px rgba(0, 0, 0, 0.35);
+    transform: scale(1.01);
   }
   .word__title {
     border-radius: 10px 10px 0 0;
@@ -374,7 +380,7 @@
 @media (min-width: 1024px) {
   .project {
     margin-top: 160px;
-    width: 100%;
+    width: 80%;
   }
   .project__title {
     font-size: clamp(3em, 30px, 6em);
@@ -383,10 +389,16 @@
     margin-top: 24px;
     padding-top: 16px;
     width: 50%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 80%;
   }
   .project__text {
     font-size: 22px;
     letter-spacing: 0.2rem;
+    width: 70%;
   }
 }
 
@@ -404,7 +416,7 @@
   align-items: center;
   gap: 0;
   border-radius: 10px;
-  padding: 6px 6px 6px 6px;
+  padding: 6px 6px 8px 6px;
   box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.25);
   width: auto;
 }
@@ -578,6 +590,5 @@ a {
     justify-content: space-between;
     font-size: 18px;
     padding: 0 22px;
-    border: 1px solid saddlebrown;
   }
 }/*# sourceMappingURL=main.css.map */

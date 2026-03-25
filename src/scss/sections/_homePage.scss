@@ -126,13 +126,14 @@
         display: flex;
         flex-direction: column;
         align-items: center;
-        justify-content: space-between;
+        justify-content: flex-start;
         gap: 0px;
         margin-bottom: 32px;
         max-width: 350px;
         width: 100%;
         box-shadow: 4px 4px 6px rgba($color: #000000, $alpha: 0.20);
         padding-bottom: 16px;
+        height: 400px;
     }
 
     &__check{
@@ -192,9 +193,16 @@
         gap: 32px;
 
         &__box {
-            box-shadow: 4px 4px 6px rgba($color: #000000, $alpha: 0.20);
+            box-shadow: 4px 4px 6px rgba($color: #000000, $alpha: 0.15);
             padding-bottom: 16px;
             max-width: 350px;
+            border-radius: 10px 10px 0 0;
+            
+
+            &:hover {
+                box-shadow: 4px 4px 6px rgba($color: #000000, $alpha: 0.35);
+                transform: scale(1.01);
+            }
         }
         &__title {
             border-radius: 10px 10px 0 0;
