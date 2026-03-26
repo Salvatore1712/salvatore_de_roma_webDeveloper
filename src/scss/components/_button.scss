@@ -13,6 +13,10 @@
     color: variables.$totalWhite;
     box-shadow: 4px 4px 4px rgba($color: #000000, $alpha: 0.25);
     cursor: pointer;
+
+    a {
+        color: white;
+    }
 }
 
 .btn:hover {

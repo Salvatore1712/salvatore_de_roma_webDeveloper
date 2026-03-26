@@ -647,6 +647,9 @@
   box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
   cursor: pointer;
 }
+.btn a {
+  color: white;
+}
 
 .btn:hover {
   background-color: #018fae;
