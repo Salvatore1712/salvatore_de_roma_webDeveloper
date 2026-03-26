@@ -1,0 +1,101 @@
+@use "../abstract/variables" as variables;
+
+.form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    margin-top: 22px;
+    // border: 1px solid yellow;
+    
+    legend {
+        padding: 0px;
+        font-size: 26px;
+        color: variables.$colorBlue;
+        margin-top: 8px;
+    }
+
+    &__fieldset {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        margin-top: 22px;
+        margin-bottom: 22px;
+        border: none;
+    }
+
+    &__group {
+        align-items: left;
+        flex-direction: column;
+        width: 100%;
+        margin-top: 16px;
+    }
+
+    &__input {
+        border: 1px solid variables.$colorBlue;
+        width: 100%;
+        height: 30px;
+        border-radius: variables.$radiusBorder;
+        padding-left: 8px;
+        font-size: 16px;
+
+            &::placeholder {
+                color: lightgray;
+            }
+            
+            &__areaText {
+                height: 70px;
+                width: 100%;
+                border: 1px solid variables.$colorBlue;
+                border-radius: variables.$radiusBorder;
+                font-size: 16px;
+
+                &::placeholder {
+                    color: lightgray;
+                    font-family: variables.$fontFamily;
+                    padding-left: 8px;
+                    padding-top: 5px;
+                }
+
+                &:focus {
+                    border: none;
+                    border: 2px solid variables.$colorBlue;
+                    box-shadow: 0   0   5px variables.$colorBlue;
+                }
+            }
+
+            &:focus {
+                border: none;
+                border: 2px solid variables.$colorBlue;
+                box-shadow: 0   0   5px variables.$colorBlue;
+            }
+        }
+
+        
+        &__label {
+            color: variables.$totalBlack;
+            font-weight: 400;
+            margin: 0 0 8px 0 ;
+        }
+
+        &__message {
+            text-align: center;
+            font-size: 16px;
+            width: 100%;
+            font-style: italic;
+        }
+
+        &__action {
+            text-align: center;
+        }
+    }
+    
+.bio__text__form {
+    width: 80%;
+    margin: 0 auto;
+    font-size: 18px;
+    letter-spacing: 0.2rem;
+}

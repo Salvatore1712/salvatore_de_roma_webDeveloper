@@ -36,6 +36,7 @@
 
     &:checked ~ .menu {
         display: block;
+        width: 100dvw;
     }
 }
 
@@ -80,11 +81,13 @@
     display: none;
     position: absolute;
     z-index: 1;
-    width: 100dvw;
+    width: 100%;
     background-color: variables.$totalWhite;
     height: 100dvh;
     top: 0;
     left: 0;
+    right: 0;
+    margin: 0 auto;
 
     @media (min-width:767px) {
         display: flex;
@@ -97,14 +100,19 @@
     }
 
     &__list {
+        position: absolute;
+        top: 0;
+        left: 0;
         width: 100%;
+        z-index: 3;
         height: 100%;
         display: flex;
         flex-direction: column;
-        align-items: center;
+        
         justify-content: center;
         // border: 1px solid rgb(22, 171, 27);
         padding: 0;
+        text-align: center;
 
         @media (min-width:767px) {
             display: flex;
@@ -116,10 +124,9 @@
         }
 
         &__items {
-            display: block;
+            display: inline-block;
             align-items: center;
             justify-content: center;
-            text-align: center;
             width: 100%;
             list-style-type: none;
             padding: 10px 0 10px 0;
@@ -137,7 +144,7 @@
                 color: variables.$totalWhite;
 
                 @media (min-width:767px) {
-                    color: variables.$colorBlue;
+                    // color: variables.$colorBlue;
                     text-decoration: underline;
                     background-color: variables.$totalWhite;
                 }
@@ -163,6 +170,28 @@
             @media (min-width:767px) {
                 color: variables.$totalBlack;
             }
+
+            @media (min-width:1024px) {
+                color: variables.$totalBlack;
+                text-decoration: underline;
+            }
         }
     }
+}
+
+.active {
+    @media (min-width:767px) {
+        text-decoration: underline variables.$colorBlue;
+        background-color: #ffffff;
+        text-decoration-color: variables.$colorBlue;
+        -webkit-text-decoration-color: variables.$colorBlue;
+    }
+
+    @media (min-width:1024px) {
+        text-decoration: underline variables.$colorBlue;
+        background-color: #ffffff;
+        text-decoration-color: variables.$colorBlue;
+        -webkit-text-decoration-color: variables.$colorBlue;
+    }
+    
 }

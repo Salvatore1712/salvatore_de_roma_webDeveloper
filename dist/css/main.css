@@ -31,6 +31,7 @@
 }
 .header__btn__menu:checked ~ .menu {
   display: block;
+  width: 100dvw;
 }
 
 .header__btn__menu-toggle {
@@ -72,11 +73,13 @@
   display: none;
   position: absolute;
   z-index: 1;
-  width: 100dvw;
+  width: 100%;
   background-color: #fff;
   height: 100dvh;
   top: 0;
   left: 0;
+  right: 0;
+  margin: 0 auto;
 }
 @media (min-width: 767px) {
   .menu {
@@ -89,13 +92,17 @@
   }
 }
 .menu__list {
+  position: absolute;
+  top: 0;
+  left: 0;
   width: 100%;
+  z-index: 3;
   height: 100%;
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
   padding: 0;
+  text-align: center;
 }
 @media (min-width: 767px) {
   .menu__list {
@@ -108,10 +115,9 @@
   }
 }
 .menu__list__items {
-  display: block;
+  display: inline-block;
   align-items: center;
   justify-content: center;
-  text-align: center;
   width: 100%;
   list-style-type: none;
   padding: 10px 0 10px 0;
@@ -131,7 +137,6 @@
 }
 @media (min-width: 767px) {
   .menu__list__items:hover {
-    color: rgb(6, 174, 213);
     text-decoration: underline;
     background-color: #fff;
   }
@@ -156,12 +161,36 @@
     color: #000;
   }
 }
+@media (min-width: 1024px) {
+  .menu a:hover {
+    color: #000;
+    text-decoration: underline;
+  }
+}
+
+@media (min-width: 767px) {
+  .active {
+    -webkit-text-decoration: underline rgb(6, 174, 213);
+            text-decoration: underline rgb(6, 174, 213);
+    background-color: #ffffff;
+    text-decoration-color: rgb(6, 174, 213);
+    -webkit-text-decoration-color: rgb(6, 174, 213);
+  }
+}
+@media (min-width: 1024px) {
+  .active {
+    -webkit-text-decoration: underline rgb(6, 174, 213);
+            text-decoration: underline rgb(6, 174, 213);
+    background-color: #ffffff;
+    text-decoration-color: rgb(6, 174, 213);
+    -webkit-text-decoration-color: rgb(6, 174, 213);
+  }
+}
 
 .hero {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  align-items: left;
   margin-top: 40px;
   height: calc(92vh - 40px);
   width: 100%;
@@ -172,7 +201,7 @@
   font-weight: 100;
 }
 .hero__title {
-  font-size: clamp(6rem, 1.8182rem + 12.9091vw, 15rem);
+  font-size: clamp(6rem, 1.8182rem + 11.9091vw, 15rem);
   word-break: break-all;
   line-height: 0.8em;
   font-weight: bold;
@@ -259,6 +288,7 @@
   height: auto;
   display: flex;
   flex-direction: column;
+  align-items: center;
   gap: 16px;
 }
 .word__box {
@@ -272,7 +302,7 @@
   width: 100%;
   box-shadow: 4px 4px 6px rgba(0, 0, 0, 0.2);
   padding-bottom: 16px;
-  height: 400px;
+  height: 380px;
 }
 .word__check {
   width: 30px;
@@ -508,6 +538,101 @@
     align-items: center;
     justify-content: space-around;
   }
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  margin-top: 22px;
+}
+.form legend {
+  padding: 0px;
+  font-size: 26px;
+  color: rgb(6, 174, 213);
+  margin-top: 8px;
+}
+.form__fieldset {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  margin-top: 22px;
+  margin-bottom: 22px;
+  border: none;
+}
+.form__group {
+  align-items: left;
+  flex-direction: column;
+  width: 100%;
+  margin-top: 16px;
+}
+.form__input {
+  border: 1px solid rgb(6, 174, 213);
+  width: 100%;
+  height: 30px;
+  border-radius: 10px;
+  padding-left: 8px;
+  font-size: 16px;
+}
+.form__input::-moz-placeholder {
+  color: lightgray;
+}
+.form__input::placeholder {
+  color: lightgray;
+}
+.form__input__areaText {
+  height: 70px;
+  width: 100%;
+  border: 1px solid rgb(6, 174, 213);
+  border-radius: 10px;
+  font-size: 16px;
+}
+.form__input__areaText::-moz-placeholder {
+  color: lightgray;
+  font-family: "Figtree", sans-serif;
+  padding-left: 8px;
+  padding-top: 5px;
+}
+.form__input__areaText::placeholder {
+  color: lightgray;
+  font-family: "Figtree", sans-serif;
+  padding-left: 8px;
+  padding-top: 5px;
+}
+.form__input__areaText:focus {
+  border: none;
+  border: 2px solid rgb(6, 174, 213);
+  box-shadow: 0 0 5px rgb(6, 174, 213);
+}
+.form__input:focus {
+  border: none;
+  border: 2px solid rgb(6, 174, 213);
+  box-shadow: 0 0 5px rgb(6, 174, 213);
+}
+.form__label {
+  color: #000;
+  font-weight: 400;
+  margin: 0 0 8px 0;
+}
+.form__message {
+  text-align: center;
+  font-size: 16px;
+  width: 100%;
+  font-style: italic;
+}
+.form__action {
+  text-align: center;
+}
+
+.bio__text__form {
+  width: 80%;
+  margin: 0 auto;
+  font-size: 18px;
+  letter-spacing: 0.2rem;
 }
 
 .btn {

@@ -16,7 +16,7 @@
 @use "./sections/projectPageStyle" as projectPage;
 
 // IMPORT CONTACT_PAGE STYLE
-
+@use "./sections/contactPage" as contactPage;
 
 // BUTTON COMPONENT STYLE
 @use "./components/button" as button;
@@ -179,3 +179,4 @@ a {
     height: 200px;
     width: 100%;
 }
+

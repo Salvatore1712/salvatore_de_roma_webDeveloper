@@ -1,98 +1,143 @@
 <!-- CONTACT PAGE -->
 
-<!-- CONTACT PAGE -->
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Salvatore De Roma</title>
-    <link rel="stylesheet" href="../CSS/main.css">
+    <link rel="stylesheet" href="./dist/css/main.css">
 
-    <!-- bootsratp -->
-    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous"> -->
-    <link rel="shortcut icon" href="../img/favicon/favicon-32x32.png" type="image/png">
+    <!-- FAVICON -->
+    <link rel="icon" type="image/png" href="./src/img/favicon/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="./src/img/favicon/favicon.svg" />
+    <link rel="shortcut icon" href="./src/img/favicon/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="./src/img/favicon/apple-touch-icon.png" />
+    <link rel="manifest" href="./src/img/favicon/site.webmanifest"/>
 
-    <!-- SEO TAG META aggiungere img-->
+    <!-- SEO TAG META -->
     <meta property="og:title" content="Salvatore De Roma Web Developer">
-    <meta property="og:image" content="/Users/salvatorederoma/Documents/salvatore_de_roma_webDeveloper/assets/img/svg/image_seo_salvatoreDeRoma.jpg">
+    <meta property="og:image" content="/Users/salvatorederoma/Documents/salvatore_de_roma_webDeveloper/assets/img/foto_salvatore_deRoma.jpg">
     <meta property="og:description" content="Portfolio personale di Salvatore De Roma, realizzazione applicazioni web">
     <meta property="og:type" content="Portfolio Web">
 </head>
 <body>
 
     <!-- grid container web page -->
-    <div id="grid-container">
+    <div class="flex_container">
+        
+        <!-- HEADER -->
         <header class="header">
-            <img src="../img/svg/logo_deroma_salvatore.svg" alt="logo salvatore de roma web developer">
+            <img src="./src/img/svg/logo_deroma_salvatore.svg" alt="logo salvatore de roma web developer" class="header__image">
 
-            <!-- check input -->
-            <input type="checkbox" name="btn-menu" id="btn-menu">
-            <label for="btn-menu">
-                <span class="menu-icon"></span>
+            <!-- MENU HAMBURGER ICON -->
+            <input type="checkbox" name="btn-menu" id="btn_menu" class="header__btn__menu">
+            <label for="btn_menu">
+                <span class="header__btn__menu-toggle"></span>
             </label>
 
-            <!-- navigation menu -->
+            <!-- NAV MENU -->
             <nav class="menu">
-                <ul>
-                    <li><a href="../../index.html">HOME</a></li>
-                    <li><a href="../project_page/index.html">PROJECT</a></li>
-                    <li><a href="../about_page/index.html">ABOUT ME</a></li>
-                    <li><a href="../contact_page/index.html">CONTACTS</a></li>
+                <ul class="menu__list">
+                    <li class="menu__list__items"><a href="index.html">HOME</a></li>
+                    <li class="menu__list__items"><a href="./project_page.html">PROJECT</a></li>
+                    <li class="menu__list__items"><a href="./about_page.html">ABOUT ME</a></li>
+                    <li class="menu__list__items active"><a href="./contact_page.html">CONTACTS</a></li>
                 </ul>
             </nav>
         </header>
         
+        <!-- HERO SECTION -->
+        <main class="hero">
+            <h3 class="hero__name"></h3>
+            <h1 class="hero__title">FORM<br>CONTACT</h1>
+            <h2 class="hero__title--small">Let's talk about <span class="blue__color">your Project</span></h2>
+        </main>
 
-        <!-- FORM section -->
-        <h2 class="form-title">Let’s Talk About <span>Your Project</span></h2>
-        <p class="info-form">If you have a project in mind or would like more information, feel free to send a message using the form below.</p>
-        <form method="post" class="form">
-            <fieldset class="fieldset" title="Tell Me About Your Project">
-                <legend>Contact me</legend>
-                    <label for="name-form">Name</label>
-                    <input type="text" name="name" id="name-form">
-
-                <label for="email-form">eMail</label>
-                <input type="text" name="email" id="email-form">
-
-                <label for="request-info">Describe your request</label>
-                <input type="text" name="info" id="request-info">
-
+        <!-- SECTION INFO -->
+         <section class="bio">
+            <div class="bio__box">
+                <p class="bio__text__form">If you are looking for a clear, well-structured and results-oriented website, 
+                    you are in the right place.
+                    Share a few details about your project, your goals and what you want to achieve.
+                    Every request is carefully reviewed to provide a concrete and tailored solution.</p>
                 <br>
-            </fieldset>
-            <button type="button" class="btn btn-primary"><a href="../cv_page/index.html">SEND IT</a></button>
+            </div>
+        </section>
+        
+        <!-- FORM SECTION -->
+        <section class="contact-section" aria-labelledby="contact-title">
+            <div class="container__form">
+                <form action="/send-message" method="post" class="form">
+                <fieldset class="form__fieldset">
+                    <legend>Your details</legend>
 
-        </form>
+                    <div class="form__group">
+                    <label for="name" class="form__label">Full name</label><br>
+                    <input type="text" id="name" name="name" autocomplete="name" required placeholder="insert name" class="form__input">
+                    </div>
+
+                    <div class="form__group">
+                    <label for="email" class="form__label">Email address</label><br>
+                    <input type="email" id="email" name="email" autocomplete="email" required placeholder="email" class="form__input">
+                    </div>
+
+                    <div class="form__group">
+                    <label for="company" class="form__label">Company name</label><br>
+                    <input type="text" id="company" name="company" autocomplete="organization" placeholder="company name" class="form__input">
+                    </div>
+                </fieldset>
+
+                <fieldset class="form__fieldset">
+                    <legend>Project information</legend>
+
+                    <div class="form__group">
+                    <label for="subject" class="form__label">Subject</label><br>
+                    <input type="text" id="subject" name="subject" required placeholder="insert here subject of project" class="form__input">
+                    </div>
+
+                    <div class="form__group">
+                    <label for="message" class="form__label">Project details</label><br>
+                    <textarea id="message" name="message" rows="6" required aria-describedby="message-help" class="form__input__areaText" placeholder="insert here your idea"></textarea>
+                    <small class="form__message">
+                        Include your goals, timeline, and any useful information about the project.
+                    </small>
+                    </div>
+                </fieldset>
+
+                <div class="form__actions">
+                    <button type="submit" class="btn">SEND IT</button>
+                </div>
+                </form>
+            </div>
+        </section>
 
         <div class="spacer"></div>
-        <!-- footer section -->
-        <footer class="grid-items" id="footer">
-            <div class="social-box">
-                <a href="https://www.linkedin.com/in/salvatore-de-roma-755728222" target="_blank" rel="noopener noreferrer"><img src="../img/social_icon/linkedin-2.png" alt="linkedin link salvatore de roma"></a>
-                <a href="https://www.facebook.com/totore.deroma/" target="_blank" rel="noopener noreferrer"><img src="../img/social_icon/facebook.png" alt="facebook link salvatore de roma"></a>
-                <a href="https://www.instagram.com/salvatore_de_roma?igsh=YWVndm5ibGFsbnQy&utm_source=qr" target="_blank" rel="noopener noreferrer"><img src="../img/social_icon/instagram-2.png" alt="instagram link salvatore de roma"></a>
+
+        <!-- FOOTER -->
+        <footer class="footer">
+            <div class="footer__social__box">
+                <a href="https://www.linkedin.com/in/salvatore-de-roma-755728222" target="_blank" rel="noopener noreferrer"><img src="./src/img/social_icon/linkedin-2.png" alt="linkedin link salvatore de roma" class="social__image"></a>
+                <a href="https://www.facebook.com/totore.deroma/" target="_blank" rel="noopener noreferrer"><img src="./src/img/social_icon/facebook.png" alt="facebook link salvatore de roma" class="social__image"></a>
+                <a href="https://www.instagram.com/salvatore_de_roma?igsh=YWVndm5ibGFsbnQy&utm_source=qr" target="_blank" rel="noopener noreferrer"><img src="./src/img/social_icon/instagram-2.png" alt="instagram link salvatore de roma" class="social__image"></a>
             </div>
-            <div class="box-footer">
-                <img src="../img/svg/logo_deroma_salvatore.svg" alt="logo salvatore de roma web developer">
-                <ul class="menu-footer">
-                    <li><a href="../../index.html">home</a></li>
-                    <li><a href="../project_page/index.html">project</a></li>
-                    <li><a href="../about_page/index.html">about me</a></li>
-                    <li><a href="./index.html">contacts</a></li>
+            <div class="footer__box__menu">
+                <img src="./src/img/svg/logo_deroma_salvatore_small.svg" alt="logo salvatore de roma web developer">
+                <ul class="footer__menu">
+                    <li><a href="index.html">home</a></li>
+                    <li><a href="./project_page.html">project</a></li>
+                    <li><a href="./about_page.html">about me</a></li>
+                    <li><a href="./contact_page.html">contacts</a></li>
                 </ul>
             </div>
-            <div class="box-info-footer">
-                <p>+39 3408312740 @ 2026 Salvatore De Roma Web Developer<br>
+
+            <div class="footer__box__info">
+                <p>@ 2026 Salvatore De Roma Web Developer<br>
                 <a href="mailto:info@salvatorederoma.it">info@salvatorederoma.it</a></p>
             </div>
+            
         </footer>
     </div>
-
-
-    <!-- Bootstrap JS -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
 
 </body>
 </html>
