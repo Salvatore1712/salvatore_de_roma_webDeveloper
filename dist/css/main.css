@@ -189,7 +189,7 @@
   flex-direction: column;
   justify-content: space-between;
   margin-top: 40px;
-  height: 80vh;
+  height: 80dvh;
   width: 100%;
   overflow: hidden;
   padding-bottom: 20px;
@@ -650,6 +650,44 @@
 
 .btn:hover {
   background-color: #018fae;
+}
+
+.cv {
+  margin-top: 100px;
+  padding: 0 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 50px;
+}
+.cv__box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.cv__image {
+  border-radius: 50%;
+}
+.cv__info {
+  margin-top: 50px;
+}
+.cv__info__title {
+  font-size: 22px;
+  margin: 20px 0 10px 0;
+  color: #018fae;
+}
+.cv p {
+  letter-spacing: 0.1rem;
+  font-size: 14px;
+  width: 90%;
+  margin: 0 auto;
+  font-style: italic;
+}
+.cv li {
+  list-style-type: none;
+  font-size: 18px;
+  padding: 5px;
+  font-weight: bold;
 }
 
 *, *::after, *::before {
