@@ -7,7 +7,7 @@
     // border: variables.$debugBorder;
     justify-content: space-between;
     margin-top: 40px;
-    height: calc(92vh - 50px);
+    height: 80vh;
     width: 100%;
     overflow: hidden;
     padding-bottom: 20px;
@@ -180,6 +180,7 @@
             box-shadow: 4px 4px 6px rgba($color: #000000, $alpha: 0.20);
             padding-bottom: 16px;
             width: 100%;
+            height: auto;
         }
 
         &__text {
@@ -188,16 +189,16 @@
         }
     }
 
-    @media (min-width:1024px) {
+    @media (min-width:1023px) {
         margin-top: 200px;
-        width: 70%;
+        width: 100%;
         flex-direction: row;
         gap: 32px;
 
         &__box {
             box-shadow: 4px 4px 6px rgba($color: #000000, $alpha: 0.15);
             padding-bottom: 16px;
-            max-width: 350px;
+            max-width: 380px;
             border-radius: 10px 10px 0 0;
             
 
